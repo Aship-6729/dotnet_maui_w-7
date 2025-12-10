@@ -1,0 +1,35 @@
+﻿
+
+
+
+#card-container {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#image-container {
+    flex: 0 0 120px; /* Fixed width of 120px, doesn't grow or shrink */
+}
+
+    #image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+#details-container {
+    flex: 1; /* Takes remaining space */
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail {
+    font-weight: bold;
+    margin-bottom: 4px;
+}

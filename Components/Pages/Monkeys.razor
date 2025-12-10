@@ -1,0 +1,50 @@
+﻿@page "/monkey"
+<h3>Monkeys</h3>
+
+@foreach (Monkey monkey in monkeyList)
+{
+    <div id="container">
+        <div id="card-container">
+            <div id="image-container">
+                <img src="@monkey.Image" />
+            </div>
+
+            <div id="details-container">
+                <div class="detail">Name:</div> @monkey.Name
+                <div class="detail">Location:</div> @monkey.Location
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    public class Monkey
+    {
+        public string Name;
+        public string Location;
+        public string Image;
+
+        public Monkey(string name, string location, string image)
+        {
+            this.Name = name;
+            this.Location = location;
+            this.Image = image;
+        }
+    }
+
+    private List<Monkey> monkeyList;
+
+    public Monkeys()
+    {
+        Monkey monkey1 = new Monkey("Baboon", "Africa & Asia", "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/baboon.jpg");
+        Monkey monkey2 = new Monkey("Capuchin Monkey", "Central & South America", "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/capuchin.jpg");
+        Monkey monkey3 = new Monkey("Blue Monkey", "Central and East Africa", "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/bluemonkey.jpg");
+
+        monkeyList = new List<Monkey> { monkey1, monkey2, monkey3 };
+    }
+}
+           
+        
+    
+
+}
