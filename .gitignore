@@ -1,0 +1,35 @@
+# Build output and temporary files
+bin/
+obj/
+.vs/
+.idea/ # For JetBrains Rider users
+*.user
+*.suo
+*.cache
+*.bak
+*.log
+*.pdb
+*.tmp
+*.vspscc
+
+# NuGet packages
+**/packages/
+*.nuget.props
+*.nuget.targets
+
+# Visual Studio Code specific files
+.vscode/
+
+# Mobile platform specific build output
+Platforms/Android/bin/
+Platforms/Android/obj/
+Platforms/iOS/bin/
+Platforms/iOS/obj/
+Platforms/MacCatalyst/bin/
+Platforms/MacCatalyst/obj/
+Platforms/Windows/bin/
+Platforms/Windows/obj/
+
+# Environment variables and sensitive data
+appsettings.Development.json # Or any other specific appsettings file containing sensitive data
+*.env
