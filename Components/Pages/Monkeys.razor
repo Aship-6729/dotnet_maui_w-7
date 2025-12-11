@@ -3,16 +3,29 @@
 
 @foreach (Monkey monkey in monkeyList)
 {
-    <div id="container">
-        <div id="card-container">
-            <div id="image-container">
-                <img src="@monkey.Image" />
+    @* two cards div added to keep a  2 card in a row *@
+    <div id="cards-wrapper">
+        <div id="cards-flex-container">
+            <div class="card-container">
+                <div class="image-container">
+                    <img src="@monkey.Image" />
+                </div>
+                <div class="details-container">
+                    <div class="detail">Name:</div> @monkey.Name
+                    <div class="detail">Location:</div> @monkey.Location
+                </div>
             </div>
-
-            <div id="details-container">
-                <div class="detail">Name:</div> @monkey.Name
-                <div class="detail">Location:</div> @monkey.Location
+            <!-- Second card -->
+            <div class="card-container">
+                <div class="image-container">
+                    <img src="@monkey.Image" />
+                </div>
+                <div class="details-container">
+                    <div class="detail">Name:</div> @monkey.Name
+                    <div class="detail">Location:</div> @monkey.Location
+                </div>
             </div>
+           
         </div>
     </div>
 }
